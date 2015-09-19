@@ -17,11 +17,14 @@
 		<nav id="menuPrincipal">
 			<ul>
 				<li>
-					<img src="/laravelDirectorioTelefonico/public/img/menu/add-user.png" style="height:50px; width:50px"><a href="">Registrar Contacto</a> </li>
+					<img src="/laravelDirectorioTelefonico/public/img/menu/add-user.png" style="height:50px; width:50px">
+					<a href="/laravelDirectorioTelefonico/public/directorio/insertar">Registrar Contacto</a></li>
 				<li>
-					<img src="/laravelDirectorioTelefonico/public/img/menu/ev-events-image.png" style="height:50px; width:50px"><a href="">Ver Directorio</a> </li>
+					<img src="/laravelDirectorioTelefonico/public/img/menu/ev-events-image.png" style="height:50px; width:50px">
+					<a href="">Ver Directorio</a></li>
 				<li>
-					<img src="/laravelDirectorioTelefonico/public/img/menu/imprimir_icon.png" style="height:50px; width:50px"><a href="">Imprimir Datos</a> </li>
+					<img src="/laravelDirectorioTelefonico/public/img/menu/imprimir_icon.png" style="height:50px; width:50px">
+					<a href="">Imprimir Datos</a></li>
 			</ul>
 		</nav>
 		<div id="divAppSesion">
