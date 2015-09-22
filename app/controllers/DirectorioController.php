@@ -70,5 +70,15 @@ class DirectorioController extends BaseController{
 
 		return View::make('directorio/insertar');
 	}
+
+	public function actionVerPorIdUsuario(){
+		
+		$tUsuario=TUsuario::whereRaw('nombreUsuario=?',[Session::get('usuario')])->get();
+
+		$listaTDirectorio= TDirectorio::whereRaw('idUsuario=?',[$tUsuario[0]->idUsuario])->get();
+
+		return View::make('directorio/verporidusuario',['listaTDirectorio' => $listaTDirectorio]);
+
+	}
 }
  ?>
