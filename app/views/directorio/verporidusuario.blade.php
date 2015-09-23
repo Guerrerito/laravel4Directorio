@@ -9,6 +9,7 @@
 		<th>Fecha de Nacimiento</th>
 		<th>Fecha de Registro</th>
 		<th>Ultima modificacion</th>
+		<th></th>
 	</thead>
 	<tbody>
 		@foreach($listaTDirectorio as $value)
@@ -18,11 +19,20 @@
 			<td>{{{$value->telefono}}} </td>	
 			<td>{{{$value->fechaNacimiento}}} </td>	
 			<td>{{{$value->created_at}}} </td>	
-			<td>{{{$value->updated_at}}} </td>		
+			<td>{{{$value->updated_at}}} </td>
+			<td><input type="button" value="Editar" onclick="editar('{{{$value->idDirectorio}}}');"></td>		
+
 		</tr>
 		@endforeach
 	</tbody>
 </table>
+<script type="text/javascript">
+	
+	function editar(idDirectorio){
+		window.location.href='/laravelDirectorioTelefonico/public/directorio/editar/'+ idDirectorio;
+	}
+
+</script>
 
 
 
