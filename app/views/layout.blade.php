@@ -14,6 +14,7 @@
 </head>
 <body>
 	<header>
+		@if(Session::has('usuario'))
 		<nav id="menuPrincipal">
 			<ul>
 				<li>
@@ -27,6 +28,7 @@
 					<a href="">Imprimir Datos</a></li>
 			</ul>
 		</nav>
+		@endif
 		<div id="divAppSesion">
 			<b>Session Iniciada como:<a href="/laravelDirectorioTelefonico/public/usuario/verpornombreusuario">@ {{{Session::get('usuario')}}} </a></b>
 			<a href="/laravelDirectorioTelefonico/public/usuario/cerrarsesion">  Cerrar Sesion</a>

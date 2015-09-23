@@ -13,7 +13,16 @@
 
 App::before(function($request)
 {
-	//
+	$url= explode('/',Request::url());	
+	$url = $url[0].'//'.$url[2].'/laravelDirectorioTelefonico/public';
+
+	if ($url!=Request::url() && Request::url()!=$url.'/usuario/insertar' && Request::url()!=$url.'/usuario/login' && !Session::has('usuario')) {
+
+		return Redirect::to('/');
+		
+	}
+
+
 });
 
 

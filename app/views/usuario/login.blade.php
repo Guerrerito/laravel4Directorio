@@ -10,6 +10,7 @@
 	<input type="password" id="txtContrasenia" name="txtContrasenia"><br><br>
 
 	<input type="submit" value="Entrar">
+	<a href="/laravelDirectorioTelefonico/public/usuario/insertar">Registrate !</a>
 </form>
 
 
