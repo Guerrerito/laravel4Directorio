@@ -14,7 +14,7 @@ Route::get('/directorio/verporidusuario','DirectorioController@actionVerPorIdUsu
 Route::any('/directorio/editar/{idDirectorio?}','DirectorioController@actionEditar');
 Route::get('/directorio/eliminar/{idDirectorio}','DirectorioController@actionEliminar');
 
-
+Route::get('otros/imprimirexcel','OtrosController@actionImprimirExcel');
 
 
 

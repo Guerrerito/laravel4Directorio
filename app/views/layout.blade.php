@@ -25,7 +25,7 @@
 					<a href="/laravelDirectorioTelefonico/public/directorio/verporidusuario">Ver Directorio</a></li>
 				<li>
 					<img src="/laravelDirectorioTelefonico/public/img/menu/imprimir_icon.png" style="height:50px; width:50px">
-					<a href="">Imprimir en Excel</a></li>
+					<a href="/laravelDirectorioTelefonico/public/otros/imprimirexcel">Imprimir en Excel</a></li>
 			</ul>
 		</nav>
 		@endif
