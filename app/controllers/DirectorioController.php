@@ -149,5 +149,31 @@ class DirectorioController extends BaseController{
 		return View::make('directorio/editar',['tDirectorio' => $tDirectorio]);
 
 	}
+
+	public function actionEliminar($idDirectorio=null){
+
+		$tDirectorio=TDirectorio::find($idDirectorio);
+		$tDirectorio->delete();
+
+		Session::flash('mensajeGlobal','Contacto eliminado de la faz .');
+		Session::flash('color','#176dee');
+		return Redirect::to('directorio/verporidusuario');
+	}
 }
  ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

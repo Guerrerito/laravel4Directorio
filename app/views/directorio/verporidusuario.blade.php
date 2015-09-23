@@ -10,6 +10,7 @@
 		<th>Fecha de Registro</th>
 		<th>Ultima modificacion</th>
 		<th></th>
+		<th></th>
 	</thead>
 	<tbody>
 		@foreach($listaTDirectorio as $value)
@@ -21,7 +22,7 @@
 			<td>{{{$value->created_at}}} </td>	
 			<td>{{{$value->updated_at}}} </td>
 			<td><input type="button" value="Editar" onclick="editar('{{{$value->idDirectorio}}}');"></td>		
-
+			<td><input type="button" value="Eliminar" onclick="eliminar('{{{$value->idDirectorio}}}');"></td>
 		</tr>
 		@endforeach
 	</tbody>
@@ -30,6 +31,14 @@
 	
 	function editar(idDirectorio){
 		window.location.href='/laravelDirectorioTelefonico/public/directorio/editar/'+ idDirectorio;
+	}
+	function eliminar(idDirectorio){
+		if(confirm('¿Esta UD seguro de eliminar este Contacto?')){
+			window.location.href='/laravelDirectorioTelefonico/public/directorio/eliminar/'+idDirectorio;	
+		}else{
+			alert('La operacion fue cancelada');
+		}
+		
 	}
 
 </script>

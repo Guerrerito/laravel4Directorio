@@ -12,6 +12,7 @@ Route::any('/usuario/editar/{idUsuario?}','usuarioController@actionEditar');
 Route::any('/directorio/insertar','DirectorioController@actionInsertar');
 Route::get('/directorio/verporidusuario','DirectorioController@actionVerPorIdUsuario');
 Route::any('/directorio/editar/{idDirectorio?}','DirectorioController@actionEditar');
+Route::get('/directorio/eliminar/{idDirectorio}','DirectorioController@actionEliminar');
 
 
 
