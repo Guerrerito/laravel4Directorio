@@ -26,6 +26,9 @@
 				<li>
 					<img src="/laravelDirectorioTelefonico/public/img/menu/imprimir_icon.png" style="height:50px; width:50px">
 					<a href="/laravelDirectorioTelefonico/public/otros/imprimirexcel">Imprimir en Excel</a></li>
+				<li>
+					<img src="/laravelDirectorioTelefonico/public/img/menu/imprimir_icon.png" style="height:50px; width:50px">
+					<a href="/laravelDirectorioTelefonico/public/otros/imprimirpdf" >Imprimir en PDF</a></li>	
 			</ul>
 		</nav>
 		@endif

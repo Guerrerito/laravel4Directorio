@@ -22,6 +22,37 @@ class OtrosController extends BaseController{
 			});
 		})->download('xlsx');
 	}
+
+	public function actionImprimirPDF(){
+ 		$tUsuario=TUsuario::whereRaw('nombreUsuario=?',[Session::get('usuario')])->get();
+		$listaTDirectorio= TDirectorio::whereRaw('idUsuario=?',[$tUsuario[0]->idUsuario])->get();
+
+
+ 		Fpdf::AddPage();
+        Fpdf::SetFont('Arial','B',16);
+        $i=0;
+        Fpdf::Cell(40,3*$i,'USUARIO');
+    	Fpdf::Cell(50,3*$i,'NOMBRE ');
+    	Fpdf::Cell(50,3*$i,'DIRECCION ');
+    	Fpdf::Cell(40,3*$i,'TELEFONO ',0,1,'C');
+        $i++;
+        Fpdf::Cell(40,3*$i,'',0,1,'C');
+        Fpdf::Cell(40,3*$i,'',0,1,'C');
+        Fpdf::SetFont('Arial','',12);
+        foreach ($listaTDirectorio as $key => $value) {
+        	Fpdf::Cell(40,3*$i,$value->tUsuario->nombreUsuario);
+        	Fpdf::Cell(50,3*$i,$value->nombreCompleto);
+        	Fpdf::Cell(50,3*$i,$value->direccion);
+        	Fpdf::Cell(40,3*$i,$value->telefono,0,1,'C');
+        	$i++;
+        }
+
+        //Fpdf::Cell(40,10,'Hello World!');
+        // Fpdf::Output();
+
+        $header=['Content-Type' => 'appication/pdf'];
+        return response::make(Fpdf::Output(), 200, $header);
+	}
 }
 
 

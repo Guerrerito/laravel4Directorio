@@ -13,8 +13,6 @@ Route::any('/directorio/insertar','DirectorioController@actionInsertar');
 Route::get('/directorio/verporidusuario','DirectorioController@actionVerPorIdUsuario');
 Route::any('/directorio/editar/{idDirectorio?}','DirectorioController@actionEditar');
 Route::get('/directorio/eliminar/{idDirectorio}','DirectorioController@actionEliminar');
-
+// excel y pdf
 Route::get('otros/imprimirexcel','OtrosController@actionImprimirExcel');
-
-
-
+Route::get('otros/imprimirpdf','OtrosController@actionImprimirPDF');

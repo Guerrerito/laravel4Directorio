@@ -92,6 +92,7 @@ return array(
 	*/
 
 	'providers' => array(
+		'Anouar\Fpdf\FpdfServiceProvider',
 		'Maatwebsite\Excel\ExcelServiceProvider',
 		'Illuminate\Foundation\Providers\ArtisanServiceProvider',
 		'Illuminate\Auth\AuthServiceProvider',
@@ -164,6 +165,7 @@ return array(
 		'Excel' 		  => 'Maatwebsite\Excel\Facades\Excel',
 		'File'            => 'Illuminate\Support\Facades\File',
 		'Form'            => 'Illuminate\Support\Facades\Form',
+		'Fpdf'            => 'Anouar\Fpdf\Facades\Fpdf',
 		'Hash'            => 'Illuminate\Support\Facades\Hash',
 		'HTML'            => 'Illuminate\Support\Facades\HTML',
 		'Input'           => 'Illuminate\Support\Facades\Input',
