@@ -42,7 +42,9 @@
 			@if(isset($mensajeGlobal))
 				<div style="color: {{{$color}}}"> {{$mensajeGlobal}} </div>
 			@endif	
+			
 			@yield('cuerpo')
+
 		</section>
 	</section>
 	<footer>
